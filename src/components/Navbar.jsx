@@ -1,34 +1,26 @@
-import React from 'react'
-
-const Navbar = (props) => {
-
-    
-
-
+import React from "react";
+import logo from "../assets/logo.png";
+const Navbar = () => {
   return (
     <nav className="flex justify-between items-center px-[3rem] py-[2.5rem] mx-auto h-10 bg-black">
       <div className="logo ">
-        <h1 className="text-amber-300">GV Barver Shop</h1>
+        <img src={logo} className="h-[4rem]" alt="" />
       </div>
-      <ul className="navigation-buttons flex justify-between gap-5 text-amber-300">
-        <li>
-          <a  href="/">
-            Home
-          </a>
+      <ul
+        id="navbar"
+        className="navigation-buttons flex justify-between gap-5 text-white font-bold">
+        <li className="h-[2rem] transition-colors	 hover:border-b ">
+          <a href="/">Home</a>
         </li>
-        <li>
+        <li className="h-[2rem] transition-colors	 hover:border-b ">
           <a href="/aboutus">About us</a>
         </li>
-
-        <li>
+        <li className="h-[2rem] transition-colors	 hover:border-b ">
           <a href="/bookappointment">Book now</a>
-        </li>
-        <li>
-          <a href="/contact">Contact</a>
         </li>
       </ul>
     </nav>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
